@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensino Mediado</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+        /* Botão */
+        .container-botao {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Modificado para distribuir espaço igualmente */
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .container-botao button {
+            border: 0px solid #b9c4d7;
+            padding: 20px;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.2rem;
+            color: #ffffff;
+            width: 50%; /* Ajustado para ocupar toda a largura disponível */
+            box-sizing: border-box; /* Adicionado para incluir a largura do padding no cálculo */
+        }
+
+        .botao-azul {
+            background-color: #1c4587;
+        }
+
+        .botao-verde {
+            background-color: #008000;
+            color: #ffffff;
+        }
+
+
+
+        .botao-customizado.ativo {
+            background-color: #2556cc;
+            color: #ffffff;
+        }
+        /* Fim */
+
+        /* Colapso */
+        .acordeao {
+            width: 100%;
+            display: none;
+        }
+
+        .acordeao-item {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+
+        .acordeao-cabecalho {
+            position: relative;
+            padding: 1rem 1.25rem;
+            font-size: 1.2rem;
+            color: #212529;
+            text-align: left;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .acordeao-cabecalho-azul {
+            background-color: #2556cc;
+            color: #ffffff;
+        }
+
+        .acordeao-painel {
+            display: none;
+            padding: 1rem 1.25rem !important;
+            font-size: 1rem;
+            font-family: "Roboto", sans-serif;
+            color: #212529;
+            text-align: left;
+        }
+
+        .acordeao-painel-azul {
+            color: #2556cc;
+        }
+
+        .acordeao-cabecalho-verde {
+            background-color: #008000;
+            color: #ffffff;
+        }
+
+        .acordeao-painel-verde {
+            color: #008000;
+        }
+
+        .container-botao button.botao-verde {
+            background-color: #008000;
+            color: #ffffff;
+        }
+
+        .botao-customizado.ativo {
+            background-color: #2556cc;
+            color: #ffffff;
+        }
+
+        .corpo {
+            font-size: 19px;
+        }
+
+        .container-botao button,
+        .acordeao-cabecalho,
+        .acordeao-painel {
+            font-size: 1rem;
+        }
+        /* Fim */
+    </style>
+</head>
+
+<body>
+    <!-- Div botões -->
+    <div class="container-botao">
+        <button class="botao-customizado botao-azul" type="button" onclick="alternarBotao('azul')">
+            Guia de Estudo para o Estudante
+        </button>
+        <button class="botao-customizado botao-verde" type="button" onclick="alternarBotao('verde')">
+            Guia de Orientação para o Professor
+        </button>
+    </div>
+
+
+<!-- Conteúdo azul -->
+<div id="minhaDivAzul" class="acordeao">
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 1)">
+          EF 6º Ano
+      </div>
+      <div id="painelAzul1" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/11QNhXWuylBCLWlhKZlDd8zmNGfLfd4Mi/view" target="_blank">Matemática</a><br></br>
+          <a href="https://drive.google.com/file/d/1M0SPRwm_zpUskUBCkCqcushsQeZ8xP-b/view" target="_blank">Arte</a><br></br>
+          <a href="https://drive.google.com/file/d/1MMFC91hJo43dWZP0_0R3k4A8FkTGQiiX/view" target="_blank">Educação Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1n1N0dc3uKKKnGVq2XpX4YLGELYch_oxe/view" target="_blank">História</a><br></br>
+          <a href="https://drive.google.com/file/d/1SqlsfZxFOET0cpPxw0UDUHsc1M4y_poK/view" target="_blank">Língua Inglesa</a><br></br>
+          <a href="https://drive.google.com/file/d/1AlO1NjTMv6cQHBpsHyFTOuq5fUzqWKMa/view" target="_blank">Ensino Religioso</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 2)">
+          EF 7º Ano
+      </div>
+      <div id="painelAzul2" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1cgDapf9d8RtmoqmA8SST-k0hyU-KEjDU/view" target="_blank">Língua Portuguesa</a><br></br>
+          <a href="https://drive.google.com/file/d/13l_n-IVpsXeHqY3DEX7UvF_o4nRg3lSi/view" target="_blank">Educação Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1nX0udhhQFsptv3T6Flp4wV2j5k09AM9u/view" target="_blank">Matemática</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 3)">
+          EF 8º Ano
+      </div>
+      <div id="painelAzul3" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1C5KMjbjdA_ghFYcryaMFzwXTMbqmr2KU/view" target="_blank">Língua Inglesa</a><br></br>
+          <a href="https://drive.google.com/file/d/1-a0rkAYdlx8TWF8CZso0N0k500urgqEy/view" target="_blank">Arte</a><br></br>
+          <a href="https://drive.google.com/file/d/1EfEtlbKzJfs3DPPHkip5qMghAZoQ3myw/view" target="_blank">Educação Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1aZpSWuk6RKkCtYRW0AAC07UEJSvWMHv6/view" target="_blank">Ensino Religioso</a><br></br>
+          <a href="https://drive.google.com/file/d/10oiGOAPW-r_2PkLY0I-wBo-zRkeK3NH3/view" target="_blank">Língua Portuguesa</a><br></br>
+          <a href="https://drive.google.com/file/d/12D-x3QFUIJNPR7AClqapAcILFyJDrduz/view" target="_blank">Ciências</a><br></br>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 4)">
+          EF 9º Ano
+      </div>
+      <div id="painelAzul4" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1MLlkg8Z02YCLprAn3-ao_fKWvD4IiaJ-/view" target="_blank">Matemática</a><br></br>
+          <a href="https://drive.google.com/file/d/1I8uTzSVwNbCXjvNDSvK04AhubNF2lqcL/view" target="_blank">Ensino Religioso</a><br></br>
+          <a href="https://drive.google.com/file/d/1vIxHt31pCIewIplD5MIzLRPQBP30Tjyj/view" target="_blank">Ciências</a><br></br>
+          <a href="https://drive.google.com/file/d/10oiGOAPW-r_2PkLY0I-wBo-zRkeK3NH3/view" target="_blank">Arte</a><br></br>
+          <a href="https://drive.google.com/file/d/11U3N1QMr8HD9IF2hpnxTWrLNcFYivRNg/view" target="_blank">História</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 5)">
+          EM 1ª Série
+      </div>
+      <div id="painelAzul5" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1vANsbYupYdJIHIiCNOWsIIr1omnO6uIA/view" target="_blank">Educação Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1iX76ruiz67N9Sv0eh_7dCKCSA3pJfcXO/view" target="_blank">História</a><br></br>
+          <a href="https://drive.google.com/file/d/10RJUb-IWDxNoQ5kmDQ5bYmEd9Amso-p7/view" target="_blank">Biologia</a><br></br>
+          <a href="https://drive.google.com/file/d/11U3N1QMr8HD9IF2hpnxTWrLNcFYivRNg/view" target="_blank">Filosofia</a><br></br>
+          <a href="https://drive.google.com/file/d/1er_aqqSI2_otKZr57OFm_2eWMIxTdjkz/view" target="_blank">Língua Inglesa</a><br></br>
+          <a href="https://drive.google.com/file/d/1saAXC_tnkqAKOBaMvrepFeqlQM48JLtP/view" target="_blank">Química</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 6)">
+          EM 2ª Série
+      </div>
+      <div id="painelAzul6" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1rd8tLyCroVQFomIT4BEavfP7G69xLTf0/view" target="_blank">Química</a><br></br>
+          <a href="https://drive.google.com/file/d/1tq6pKmTHThmIHyh3GgPJdveUZM3em9D_/view" target="_blank">Matemática</a><br></br>
+          <a href="https://drive.google.com/file/d/1VUIn2ibSE0o8IM1qI1esbFK2zZvimrY5/view" target="_blank">História</a><br></br>
+          <a href="https://drive.google.com/file/d/13ciCEnBnN1jrmOpxNyRKlfAJsycZlZoH/view" target="_blank">Sociologia</a><br></br>
+          <a href="https://drive.google.com/file/d/1vpgugPOA56c4VvfJWaJzMG2MOcsSlCF5/view" target="_blank">Arte</a><br></br>
+          <a href="https://drive.google.com/file/d/1XFjIjSDBmuzKwnjnhlpdcEWzNbitQYQB/view" target="_blank">Geografia</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 7)">
+          EM 3ª Série
+      </div>
+      <div id="painelAzul7" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1Lbrj0uJiEGz1vCgAjDxwKNaxyB77Sqab/view" target="_blank">Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1cJ1UvvquImbADUCBay8RBmbtYnL6zoWV/view" target="_blank">Matemática</a><br></br>
+          <a href="https://drive.google.com/file/d/19rNOngl3oZQesCJfxF1Oq8xuC36R-9Vy/view" target="_blank">História</a><br></br>
+          <a href="https://drive.google.com/file/d/1zovzPLFEjiXOhYMFqmJk9hBr_kct2JpW/view" target="_blank">Língua Inglesa</a><br></br>
+          <a href="https://drive.google.com/file/d/1Ibcf8TGw127I_qPB8EpSowTQXd1IO0ou/view" target="_blank">Sociologia</a><br></br>
+          <a href="https://drive.google.com/file/d/1B_ugF4P7xDqETVPcpyRXDMdlMIPuKjH7/view" target="_blank">Filosofia</a><br></br>
+          <a href="https://drive.google.com/file/d/1oPetz3ZxJxfHEckAcBYawGs2pxue6ukv/view" target="_blank">Biologia</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 8)">
+          EJA 1ª Fase
+      </div>
+      <div id="painelAzul8" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1Re9nXPz9LaIpil9nAYp8Hh7zb0-nrT9-/view" target="_blank">Língua Inglesa</a><br></br>
+          <a href="https://drive.google.com/file/d/1pDLUjN55t5U2lfRM46H1fKuZnOWRCpIU/view" target="_blank">Matemática</a><br></br>
+          <a href="https://drive.google.com/file/d/1t94FW--p6co7KQjW4DsikAEzepqdGbtz/view" target="_blank">Filosofia</a><br></br>
+          <a href="https://drive.google.com/file/d/10D89O2WsT5dwcqysr2qbH-C3GxJR4qKP/view" target="_blank">Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1t6DT37m-cSXbVuNycmoK2HCqQfNXOzxL/view" target="_blank">Arte</a><br></br>
+          <a href="https://drive.google.com/file/d/1ZsxNaIA-Cwr0U1Al1Lb48XVCPkFs3i37/view" target="_blank">Geografia</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 9)">
+          EJA 2ª Fase
+      </div>
+      <div id="painelAzul9" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1oNZFyoYX9k8Y_2DZmXT5hwJf37RGD8_B/view" target="_blank">Língua Portuguesa</a><br></br>
+          <a href="https://drive.google.com/file/d/1Y4eOpdFugnpyGAUAMW5n0GDwhg-1tnVb/view" target="_blank">Química</a><br></br>
+          <a href="https://drive.google.com/file/d/1uPaysqCeLFwd2JyylyTdS-cJ-zeebOV8/view" target="_blank">Geografia</a><br></br>
+          <a href="https://drive.google.com/file/d/1nUBO_O6T7dlbUJnZlQCFimkztD_PJomL/view" target="_blank">Educação Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1L3GbQD-FUb7GuGgb0-cfffTHq644x52P/view" target="_blank">História</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 10)">
+          EJA 4ª Fase
+      </div>
+      <div id="painelAzul10" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1NgWSGQjgoNVj3vKLPnUiHtSETVYxtjDT/view" target="_blank">História</a><br></br>
+          <a href="https://drive.google.com/file/d/1fzPA4n897nlfrEhn2-4Wp68QPs5cx30g/view" target="_blank">Ciências</a><br></br>
+          <a href="https://drive.google.com/file/d/15mYsp8Fl0ttTqCgLvaa9x6xPV-Lyqffb/view" target="_blank">Língua Espanhola</a><br></br>
+          <a href="https://drive.google.com/file/d/1HERqx5uCJrSHLgruEM9EJSFuOHG1ayhM/view" target="_blank">Geografia</a><br></br>
+          <a href="https://drive.google.com/file/d/1j5tDS2z2urUPiBWj3c-SfGfFVhJX535Y/view" target="_blank">Educação Física</a>
+      </div>
+  </div>
+
+  <div class="acordeao-item">
+      <div class="acordeao-cabecalho acordeao-cabecalho-azul" onclick="alternarPainel('azul', 11)">
+          EJA 5ª Fase
+      </div>
+      <div id="painelAzul11" class="acordeao-painel acordeao-painel-azul">
+          <a href="https://drive.google.com/file/d/1qf74eUE5nJ-vGJ_jnL7V_4uufsi59OLb/view" target="_blank">Matemática</a><br></br>
+          <a href="https://drive.google.com/file/d/1fy-GPSByo9oGeaUqGYgVF-80oF8pZ1vU/view" target="_blank">Ensino Religioso</a><br></br>
+          <a href="https://drive.google.com/file/d/1ifSE_nFhgT1RNsN-0rHpjZlzQmSpEjdw/view" target="_blank">Educação Física</a><br></br>
+          <a href="https://drive.google.com/file/d/1r2NTRXYvx6QzACfD6U9ekKfZEgkKPzOm/view" target="_blank">Geografia</a><br></br>
+          <a href="https://drive.google.com/file/d/1z2ihv1egyZ3lGiAtl_kdbsUUhfE27Bzt/view" target="_blank">Língua Espanhola</a><br></br>
+          <a href="https://drive.google.com/file/d/1PbMze2TwMAZW2YKt69HPGXZF3d-2q7wn/view" target="_blank">Arte</a>
+      </div>
+  </div>
+</div>
+
+<!-- Conteúdo verde -->
+<div id="minhaDivVerde" class="acordeao">
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 1)">
+            EF 6º Ano
+        </div>
+        <div id="painelVerde1" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1ZdF2gDugouk7TbVUDYOsYMvxB8GYUwcA/view" target="_blank">Arte</a><br></br>
+            <a href="https://drive.google.com/file/d/1KIWm9GB7mQCKC952xDNTh7PeLTndgNcI/view" target="_blank">Matemática</a><br></br>
+            <a href="https://drive.google.com/file/d/1EjTYg3ZNBeJ6ocV332VLcRxy9btJkEDw/view" target="_blank">Educação Física</a><br></br>
+            <a href="https://drive.google.com/file/d/1V1CHIA7a3RitlrA7p7OG_5vNPzQqV7GN/view" target="_blank">História</a><br></br>
+            <a href="https://drive.google.com/file/d/1w5zpnOB2HWnYEEAW5SoKqv9mlP8U-HJX/view" target="_blank">Língua Inglesa</a><br></br>
+            <a href="https://drive.google.com/file/d/1z4if11ja_1GX19OSjeaRxcO8FVRYLkpm/view" target="_blank">Ensino Religioso</a>
+            
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 2)">
+            EF 7º Ano
+        </div>
+        <div id="painelVerde2" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1bIi7luJCS_Yqn-eWbMYWkUA80qukGAUA/view" target="_blank">Matemática</a><br></br>
+            <a href="https://drive.google.com/file/d/10SdFhZRgNmNmqVF_U7WywMnm3OksqUr6/view" target="_blank">Língua Portuguesa</a><br></br>
+            <a href="https://drive.google.com/file/d/1JAeMdn1KQJtDDbUjkQlu_5rofO6UNqJY/view" target="_blank">Educação Física</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 3)">
+            EF 8º Ano
+        </div>
+        <div id="painelVerde3" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1lW0JVTWL3o7KNz5Gjzr9MxIifIbnUVR7/view" target="_blank">Língua Inglesa</a><br></br>
+            <a href="https://drive.google.com/file/d/1GFAnpNoaR2T_ujzsTenehGXrCg17k4N8/view" target="_blank">Ciências</a><br></br>
+            <a href="https://drive.google.com/file/d/1O2M1dVuyBAATvnBYSAAOgQ0gc1EIcZdn/view" target="_blank">Arte</a><br></br>
+            <a href="https://drive.google.com/file/d/1xdExuGTZJBIwxBRcSN4bd8SLGb7qIdmA/view" target="_blank">Educação Física</a><br></br>
+            <a href="https://drive.google.com/file/d/19-QBtrq8solC-3PtzHHEp_u4erT6kxp3/view" target="_blank">Ensino Religioso</a><br></br>
+            <a href="https://drive.google.com/file/d/1wsGhTs6f-5naY7lcUpss71KOEagnxDt7/view" target="_blank">Língua Portuguesa</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 4)">
+            EF 9º Ano
+        </div>
+        <div id="painelVerde4" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1QC_hC_RhmaOufYE6Ws96WGkz1jtEVcHv/view" target="_blank">Matemática</a><br></br>
+            <a href="https://drive.google.com/file/d/1qtb6QkSnysIICkv7XN0hoC6BIoRFw6os/view" target="_blank">Ensino Religioso</a><br></br>
+            <a href="https://drive.google.com/file/d/1fHYpatSOM2qB7KgSQSYurPkcHHjmPyXu/view" target="_blank">Ciências</a><br></br>
+            <a href="https://drive.google.com/file/d/1xzcveH4GrtGf0sHKT6eThQaA3h0K1i9C/view" target="_blank">Arte</a><br></br>
+            <a href="https://drive.google.com/file/d/1u8x74PnT1OYZPH96bc0NKl_M3Uh5Axq4/view" target="_blank">História</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 5)">
+            EM 1ª Série
+        </div>
+        <div id="painelVerde5" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1GLkp2mRriJ2aVguzdVAxAxCno2pz7md2/view" target="_blank">Educação Física</a><br></br>
+            <a href="https://drive.google.com/file/d/12lAwKju9l1gaSjXjXwMDSn8D4oM_7b_s/view" target="_blank">História</a><br></br>
+            <a href="https://drive.google.com/file/d/1y3hFFPcAHFwsik1vY2acIb2vpq8z1bcN/view" target="_blank">Biologia</a><br></br>
+            <a href="https://drive.google.com/file/d/1nBWFBfhZm8ogyS9490nh3LK4648QNybk/view" target="_blank">Filosofia</a><br></br>
+            <a href="https://drive.google.com/file/d/1mNEcldwHNGsIMOO1Y3sp4qoOmI65i126/view" target="_blank">Língua Inglesa</a><br></br>
+            <a href="https://drive.google.com/file/d/1Uu9dm5qLXVGbi7uuTT2j6NVET3vB69gu/view" target="_blank">Química</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 6)">
+            EM 2ª Série
+        </div>
+        <div id="painelVerde6" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1qSWJ7wOqW_udYW8E_9KZud5h1_v9ci_E/view" target="_blank">Química</a><br></br>
+            <a href="https://drive.google.com/file/d/1NzFHBep2-BbjYiE5ekaeHbZBYefx7WPg/view" target="_blank">Matemática</a><br></br>
+            <a href="https://drive.google.com/file/d/1HI4RHVClM3tf4U2QvSk6mtDd0CooQDdO/view" target="_blank">História</a><br></br>
+            <a href="https://drive.google.com/file/d/1aPAXVBW4XdTXCgCAhKhOM0B61JOSa8KL/view" target="_blank">Sociologia</a><br></br>
+            <a href="https://drive.google.com/file/d/1TgzBXMDTpyq1ErAbIwfyG8-xtr8jV7ZK/view" target="_blank">Arte</a><br></br>
+            <a href="https://drive.google.com/file/d/1XrnFaVV5tkM8-LiAGMOJvCjLguwPfjDy/view" target="_blank">Geografia</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 7)">
+            EM 3ª Série
+        </div>
+        <div id="painelVerde7" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1a1ZmepUta6cmqF8CVSb2qVotRprwAQyF/view" target="_blank">Física</a><br></br>
+            <a href="https://drive.google.com/file/d/1bnru2ktID-VQbyBBPbREiXyQiCiYe-pv/view" target="_blank">Matemática</a><br></br>
+            <a href="https://drive.google.com/file/d/1rh275W1UGQCmiOAyLle1Na1j68sz8QJC/view" target="_blank">História</a><br></br>
+            <a href="https://drive.google.com/file/d/1zvXmc3U7gveggVxbeNY_VlZ85oP9J1Tu/view" target="_blank">Língua Inglesa</a><br></br>
+            <a href="https://drive.google.com/file/d/1EO2g_xdw9XQhqAQPOMWuzJc7Pv4hNEiH/view" target="_blank">Sociologia</a><br></br>
+            <a href="https://drive.google.com/file/d/1yIR1Hj68aA0mbHDo-nHOyjOeeZfQzmC5/view" target="_blank">Filosofia</a><br></br>
+            <a href="https://drive.google.com/file/d/13T9ioeJhFRQIKa88aJqcD_6H0PYWqdDo/view" target="_blank">Biologia</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 8)">
+            EJA 1ª Fase
+        </div>
+        <div id="painelVerde8" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1y7u726JLrX_MIdAt9JZpkzd2NAFUntFS/view" target="_blank">Língua Inglesa</a><br></br>
+            <a href="https://drive.google.com/file/d/1f_YszFBihT73lTwCO6rqbxAUMRXJUtPz/view" target="_blank">Matemática</a><br></br>
+            <a href="https://drive.google.com/file/d/1iPnFNVck06ZcJ1jueoHIucEGhiVtgcJX/view" target="_blank">Filosofia</a><br></br>
+            <a href="https://drive.google.com/file/d/1Hi7txDnKf4kUabjKr7rmNUEoHEKzP69l/view" target="_blank">Física</a><br></br>
+            <a href="https://drive.google.com/file/d/19PMd593P6ltAvElf0qaxhqf-A2jOwwUc/view" target="_blank">Arte</a><br></br>
+            <a href="https://drive.google.com/file/d/1cjKXLooTZGaB7Fw2OrzSVyrKA6OdCssI/view" target="_blank">Geografia</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 9)">
+            EJA 2ª Fase
+        </div>
+        <div id="painelVerde9" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1y3VCQirDldu8gvrHOiEU3RqbrHp0YbRO/view" target="_blank">Língua Portuguesa</a><br></br>
+            <a href="https://drive.google.com/file/d/1tigy7eDuo1jbNnflKrnYPN__gKsmJ9hd/view" target="_blank">Química</a><br></br>
+            <a href="https://drive.google.com/file/d/1EeEiiQSsz-lAoK8LuCGouSdrFmovY3EN/view" target="_blank">Geografia</a><br></br>
+            <a href="https://drive.google.com/file/d/1R-X9OrTATLlpcFc4C_ke-0sL5lbuIQYQ/view" target="_blank">Educação Física</a><br></br>
+            <a href="https://drive.google.com/file/d/1HVwmk98YSKvBx9IaRBjZRTvQmxqHDV1a/view" target="_blank">História</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 10)">
+            EJA 4ª Fase
+        </div>
+        <div id="painelVerde10" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1JCvPLGW419HTwbEtakNTSrKVbQd2-J2O/view" target="_blank">História</a><br></br>
+          <a href="https://drive.google.com/file/d/1zqSrNtA7nIqC4vwQxPfGYpdvoW7GEhmp/view" target="_blank">Ciências</a><br></br>
+          <a href="https://drive.google.com/file/d/1skQc2QVkz7POGqekl5dIjMhWDZHI1eoC/view" target="_blank">Língua Espanhola</a><br></br>
+          <a href="https://drive.google.com/file/d/1AGoWfD9sqkhHe0F-pCaYaqkNbgnth3Pf/view" target="_blank">Geografia</a><br></br>
+          <a href="https://drive.google.com/file/d/1EVyXrt6DSy_76QCL8uAoHAms6l2bv7G7/view" target="_blank">Educação Física</a>
+        </div>
+    </div>
+
+    <div class="acordeao-item">
+        <div class="acordeao-cabecalho acordeao-cabecalho-verde" onclick="alternarPainel('verde', 11)">
+            EJA 5ª Fase
+        </div>
+        <div id="painelVerde11" class="acordeao-painel acordeao-painel-verde">
+            <a href="https://drive.google.com/file/d/1hr_U-6eusC73v9RwTpgCJhDHArbzmaTH/view" target="_blank">Matemática</a><br></br>
+            <a href="https://drive.google.com/file/d/1rm6XGl20Hmn7r2c3ThASqUEoWpSH3dnM/view" target="_blank">Ensino Religioso</a><br></br>
+            <a href="https://drive.google.com/file/d/1YD9fBchhxhD9nsskCllzv1cSjotqUA4Q/view" target="_blank">Educação Física</a><br></br>
+            <a href="https://drive.google.com/file/d/1ceWavrvCswRx1UjRTMnZpuxCcmfMdOiE/view" target="_blank">Geografia</a><br></br>
+            <a href="https://drive.google.com/file/d/1ivZhdYPadjTXuHE24TxHBnFec3tyU_4p/view" target="_blank">Língua Espanhola</a><br></br>
+            <a href="https://drive.google.com/file/d/1dsXmebqLHf2YPsEUfumcg-nKjd1j2NOb/view" target="_blank">Arte</a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Script botão -->
+    <script>
+        function alternarBotao(cor) {
+            var botoes = document.querySelectorAll(".botao-customizado");
+            botoes.forEach(function (btn) {
+                btn.classList.remove("ativo");
+            });
+
+            var azulDiv = document.getElementById("minhaDivAzul");
+            var verdeDiv = document.getElementById("minhaDivVerde");
+
+            if (cor === "azul") {
+                azulDiv.style.display = "block";
+                verdeDiv.style.display = "none";
+            } else if (cor === "verde") {
+                verdeDiv.style.display = "block";
+                azulDiv.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Script colapso -->
+    <script>
+        function alternarPainel(cor, numeroPainel) {
+            var painel;
+            var todosPaineis;
+
+            if (cor === "azul") {
+                painel = document.getElementById("painelAzul" + numeroPainel);
+                todosPaineis = document.querySelectorAll(".acordeao-painel-azul");
+            } else if (cor === "verde") {
+                painel = document.getElementById("painelVerde" + numeroPainel);
+                todosPaineis = document.querySelectorAll(".acordeao-painel-verde");
+            }
+
+            if (painel.style.display === "block") {
+                painel.style.display = "none";
+            } else {
+                todosPaineis.forEach(function (p) {
+                    p.style.display = "none";
+                });
+                painel.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

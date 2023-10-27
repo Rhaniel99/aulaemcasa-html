@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula em Casa Estiagem</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Button */
+.container-button-ai {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Modificado para distribuir espaço igualmente */
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+.container-button-ai button {
+            border: 0px solid #b9c4d7;
+            padding: 20px 10px 20px 20px;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.2rem;
+            color: #ffffff;
+            width: 50%; /* Ajustado para ocupar toda a largura disponível */
+            box-sizing: border-box; /* Adicionado para incluir a largura do padding no cálculo */
+        }
+.button-blue-ai {
+    background-color: #1c4587;
+}
+
+.button-green-ai {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+
+.custom-button-ai.active {
+    background-color: #2556cc;
+    color: #ffffff;
+}
+/* End */
+
+/* Collapse */
+.accordion-ai {
+    width: 100%;
+    display: none;
+}
+
+.accordion-item-ai {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.accordion-header-ai {
+    position: relative;
+    padding: 1rem 1.25rem;
+    font-size: 1.2rem;
+    color: #212529;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+}
+
+.accordion-header-blue-ai {
+    background-color: #2556cc;
+    color: #ffffff;
+}
+
+.accordion-panel-ai {
+    display: none;
+    padding: 1rem 1.25rem !important;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    color: #212529;
+    text-align: left;
+}
+
+.accordion-panel-blue-ai {
+    color: #2556cc;
+}
+
+.accordion-header-green-ai {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.accordion-panel-green-ai {
+    color: #008000;
+}
+
+
+.container-button-ai button.button-green-ai {
+        background-color: #008000;
+        color: #ffffff; /* Adicionando a cor do texto para branco */
+    }
+
+    .custom-button-ai.active {
+        background-color: #2556cc;
+        color: #ffffff; /* Garantindo que o texto também seja branco quando o botão estiver ativo */
+    }
+
+/* End */
+
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- Div botões -->
+    <div class="container-button-ai">
+        <button class="custom-button-ai button-blue-ai" type="button" onclick="toggleButton_ai('blue_ai')">
+            Guia de Estudo para o Estudante
+        </button>
+        <button class="custom-button-ai button-green-ai" type="button" onclick="toggleButton_ai('green_ai')">
+            Guia de Orientação para o Professor
+        </button>
+    </div>
+    <!-- Div collapse azul -->
+    <div id="myDivBlue-ai" class="accordion-ai">
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-blue-ai" onclick="togglePanel_ai('blue_ai', 1)">
+                EF 1º Ano
+            </div>
+            <div id="panelBlue1-ai" class="accordion-panel-ai accordion-panel-blue-ai">
+                <a href="https://drive.google.com/file/d/18IAkfl46LLgA6Gu9cWrJ1OIldyCamUXy/view" target="_blank">Volume
+                    2</a>
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-blue-ai" onclick="togglePanel_ai('blue_ai', 2)">
+                EF 2º Ano
+            </div>
+            <div id="panelBlue2-ai" class="accordion-panel-ai accordion-panel-blue-ai">
+                <a href="https://drive.google.com/file/d/1w1VncvqS-ATcVaiTwhgszj0j8jwBgOUW/view" target="_blank">Volume
+                    2</a>
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-blue-ai" onclick="togglePanel_ai('blue_ai', 3)">
+                EF 3º Ano
+            </div>
+            <div id="panelBlue3-ai" class="accordion-panel-ai accordion-panel-blue-ai">
+                <a href="https://drive.google.com/file/d/1ZK7lgAF5xugXYpNEsBr5A1oMoO9aRwSU/view" target="_blank">Volume
+                    2</a>
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-blue-ai" onclick="togglePanel_ai('blue_ai', 4)">
+                EF 4º Ano
+            </div>
+            <div id="panelBlue4-ai" class="accordion-panel-ai accordion-panel-blue-ai">
+                <a href="https://drive.google.com/file/d/1vIxHt31pCIewIplD5MIzLRPQBP30Tjyj/view" target="_blank">Volume
+                    2</a>
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-blue-ai" onclick="togglePanel_ai('blue_ai', 5)">
+                EF 5º Ano
+            </div>
+            <div id="panelBlue5-ai" class="accordion-panel-ai accordion-panel-blue-ai">
+                <a href="https://drive.google.com/file/d/197BnR99Jesz8prbOJ-he8HnLSlqm7EUQ/view" target="_blank">Volume
+                    2</a>
+            </div>
+        </div>
+    </div>
+    <!-- Div collapse verde -->
+    <div id="myDivGreen-ai" class="accordion-ai">
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-green-ai" onclick="togglePanel_ai('green_ai', 1)">
+                EF 1º Ano
+            </div>
+            <div id="panelGreen1-ai" class="accordion-panel-ai accordion-panel-green-ai">
+                <a href="https://drive.google.com/file/d/16aVRN3aHHRywHvJeX10OENTbJEqRrjqI/view" target="_blank">Volume
+                    2</a>
+
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-green-ai" onclick="togglePanel_ai('green_ai', 2)">
+                EF 2º Ano
+            </div>
+            <div id="panelGreen2-ai" class="accordion-panel-ai accordion-panel-green-ai">
+                <a href="https://drive.google.com/file/d/1jCFNPPQgDukAY-hkB35WtYkNJ6J-w0DN/view" target="_blank">Volume
+                    2</a>
+   
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-green-ai" onclick="togglePanel_ai('green_ai', 3)">
+                EF 3º Ano
+            </div>
+            <div id="panelGreen3-ai" class="accordion-panel-ai accordion-panel-green-ai">
+                <a href="https://drive.google.com/file/d/1DHNc_uxpdSHr9Tk6S2UQ_bGdwfdhzx8i/view" target="_blank">Volume
+                    2</a>
+           
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-green-ai" onclick="togglePanel_ai('green_ai', 4)">
+                EF 4º Ano
+            </div>
+            <div id="panelGreen4-ai" class="accordion-panel-ai accordion-panel-green-ai">
+                <a href="https://drive.google.com/file/d/1WmeHstVRtVsaXbUGlpM_n1Q-d_MgnHpW/view" target="_blank">Volume
+                    2</a>
+             
+            </div>
+        </div>
+        <div class="accordion-item-ai">
+            <div class="accordion-header-ai accordion-header-green-ai" onclick="togglePanel_ai('green_ai', 5)">
+                EF 5º Ano
+            </div>
+            <div id="panelGreen5-ai" class="accordion-panel-ai accordion-panel-green-ai">
+                <a href="https://drive.google.com/file/d/1AX1LNXqYt8FsVr0TtOqZGXPvJInHzuyw/view" target="_blank">Volume
+                    2</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Script botão -->
+    <script>
+        function toggleButton_ai(color_ai) {
+            var buttons = document.querySelectorAll(".custom-button-ai");
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active_ai");
+            });
+
+            if (color_ai === "blue_ai") {
+                document.getElementById("myDivBlue-ai").style.display = "block";
+                document.getElementById("myDivGreen-ai").style.display = "none";
+            } else if (color_ai === "green_ai") {
+                document.getElementById("myDivGreen-ai").style.display = "block";
+                document.getElementById("myDivBlue-ai").style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Script collapse -->
+    <script>
+        function togglePanel_ai(color_ai, panelNumber_ai) {
+            var panel;
+            var allPanels;
+
+            if (color_ai === "blue_ai") {
+                panel = document.getElementById("panelBlue" + panelNumber_ai + "-ai");
+                allPanels = document.querySelectorAll(".accordion-panel-blue-ai");
+            } else if (color_ai === "green_ai") {
+                panel = document.getElementById("panelGreen" + panelNumber_ai + "-ai");
+                allPanels = document.querySelectorAll(".accordion-panel-green-ai");
+            }
+
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                for (var i = 0; i < allPanels.length; i++) {
+                    allPanels[i].style.display = "none";
+                }
+                panel.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula em Casa Estiagem</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Button */
+.container-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Modificado para distribuir espaço igualmente */
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+.container-button button {
+            border: 0px solid #b9c4d7;
+            padding: 20px;
+            font-family: "Roboto", sans-serif;
+            font-size: 1rem;
+            color: #ffffff;
+            width: 50%; /* Ajustado para ocupar toda a largura disponível */
+            box-sizing: border-box; /* Adicionado para incluir a largura do padding no cálculo */
+        }
+.button-blue {
+    background-color: #1c4587;
+}
+
+.button-green {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.custom-button {
+    margin-right: 10px;
+}
+
+.custom-button.active {
+    background-color: #2556cc;
+    color: #ffffff;
+}
+/* End */
+
+/* Collapse */
+.accordion {
+    width: 100%;
+    display: none;
+}
+
+.accordion-item {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.accordion-header {
+    position: relative;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+}
+
+.accordion-header-blue {
+    background-color: #2556cc;
+    color: #ffffff;
+}
+
+.accordion-panel {
+    display: none;
+    padding: 1rem 1.25rem !important;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    color: #212529;
+    text-align: left;
+}
+
+.accordion-panel-blue {
+    color: #2556cc;
+}
+
+.accordion-header-green {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.accordion-panel-green {
+    color: #008000;
+}
+
+
+.container-button button.button-green {
+        background-color: #008000;
+        color: #ffffff; /* Adicionando a cor do texto para branco */
+    }
+
+    .custom-button.active {
+        background-color: #2556cc;
+        color: #ffffff; /* Garantindo que o texto também seja branco quando o botão estiver ativo */
+    }
+
+/* End */
+
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- Div botões -->
+    <div class="container-button">
+        <button class="custom-button button-blue" type="button" onclick="toggleButton('blue')">
+            Guia de Estudo para o Estudante
+        </button>
+        <button class="custom-button button-green" type="button" onclick="toggleButton('green')">
+            Guia de Orientação para o Professor
+        </button>
+    </div>
+    <!-- Div collapse azul -->
+    <div id="myDivBlue" class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 1)">
+                EF 1º Ano
+            </div>
+            <div id="panelBlue1" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/16Q1NSCeOMpTLGeI3NoU00wJS79RAvWgP/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 2)">
+                EF 2º Ano
+            </div>
+            <div id="panelBlue2" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/1u7LQsoJ-56fN8MWZQdufoLMrdNssTZT4/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 3)">
+                EF 3º Ano
+            </div>
+            <div id="panelBlue3" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/1saFADYkOwfpHte2jH3K9Hu3fAcN5pL_4/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 4)">
+                EF 4º Ano
+            </div>
+            <div id="panelBlue4" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/1InR7tmsUO7Ciu2xlgZGMmXQYcbBWEloU/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 5)">
+                EF 5º Ano
+            </div>
+            <div id="panelBlue5" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/1yuSEFHcbJlzQa84zXH5xInXwta2IGrfq/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 6)">
+                EF 6º Ano e EJA 5ª Etapa
+            </div>
+            <div id="panelBlue6" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/14oDS2ZPzbSmpYro0x4Dv8rL8BHwVs-ts/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 7)">
+                EF 7º Ano e EJA 6ª Etapa
+            </div>
+            <div id="panelBlue7" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/1q2-MUmT7xGrXwcSG_MjRnJGaboMoQkh6/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 8)">
+                EF 8º Ano e EJA 7ª Etapa
+            </div>
+            <div id="panelBlue8" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/10YyiEFdDhjIShJ9mozgtOz4Ajg-SkVnk/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 9)">
+                EF 9º Ano e EJA 8ª Etapa
+            </div>
+            <div id="panelBlue9" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/1CSsuaCmDYeMVmRlJ6kTaRwbeMTiZLOYg/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 10)">
+                EM 1ª Série e EJA 9ª Etapa
+            </div>
+            <div id="panelBlue10" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/12ZCuPnQ1VoAl1jJk2kkNixUXy7lDkggD/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 11)">
+                EM 2ª Série e EJA 10ª Etapa
+            </div>
+            <div id="panelBlue11" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/1GMwr29TqJzW0ATyiaf6kn0nk2NMjEuN9/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-blue" onclick="togglePanel('blue', 12)">
+                EM 3ª Série e EJA 11ª Etapa
+            </div>
+            <div id="panelBlue12" class="accordion-panel accordion-panel-blue">
+                <a href="https://drive.google.com/file/d/17-UjrR8AzFQiQ7nTfnNVGok2-thhEMsZ/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+    </div>
+    <!-- Div collapse verde -->
+    <div id="myDivGreen" class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 1)">
+                EF 1º Ano
+            </div>
+            <div id="panelGreen1" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1xaBX1vL_z58uSMn9S21juvP5XMq1km5x/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 2)">
+                EF 2º Ano
+            </div>
+            <div id="panelGreen2" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1Snq_YEXQlQ0OfDXzG-kAGbLfP4h7YIeM/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 3)">
+                EF 3º Ano
+            </div>
+            <div id="panelGreen3" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1eMLD7nrKIhc_2Y_fMOj5ZJ6RiBzltBrH/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 4)">
+                EF 4º Ano
+            </div>
+            <div id="panelGreen4" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1zp1bZ8_DmOOaHKQ1P6xAJuIGZD9pir2y/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 5)">
+                EF 5º Ano
+            </div>
+            <div id="panelGreen5" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1dUZ56jT3Q21ld1OhM9GX2sXQA4WEmjL1/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 6)">
+                EF 6º Ano e EJA 5ª Etapa
+            </div>
+            <div id="panelGreen6" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/18Wly-JwOgmgWak4cYLD1eblPFmk7bFdX/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 7)">
+                EF 7º Ano e EJA 6ª Etapa
+            </div>
+            <div id="panelGreen7" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1XQ59ixdkdMudx0zmh3Cw2dzWXkrkmmEZ/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 8)">
+                EF 8º Ano e EJA 7ª Etapa
+            </div>
+            <div id="panelGreen8" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1rZW_n36vCS3HmrT_F3a6HqYhlGgDGpkI/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 9)">
+                EF 9º Ano e EJA 8ª Etapa
+            </div>
+            <div id="panelGreen9" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1hHtARvlXAwwXLfgkb2cM38LNTymGiubg/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 10)">
+                EM 1ª Série e EJA 9ª Etapa
+            </div>
+            <div id="panelGreen10" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1mWGVkgK_M7JJgF3P2MB-YbI9QIIEybE1/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 11)">
+                EM 2ª Série e EJA 10ª Etapa
+            </div>
+            <div id="panelGreen11" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1rK8bJOOSw2mBIt6pnkZDVnm0MLw9zNo0/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header accordion-header-green" onclick="togglePanel('green', 12)">
+                EM 3ª Série e EJA 11ª Etapa
+            </div>
+            <div id="panelGreen12" class="accordion-panel accordion-panel-green">
+                <a href="https://drive.google.com/file/d/1SUwVfKUp-S63uYNnkXG2bs_fi9I4yogv/view" target="_blank">Volume
+                    1</a>
+            </div>
+        </div>
+    </div>
+    <!-- Script botão -->
+    <script>
+        function toggleButton(color) {
+            var buttons = document.querySelectorAll(".custom-button");
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            if (color === "blue") {
+                document.getElementById("myDivBlue").style.display = "block";
+                document.getElementById("myDivGreen").style.display = "none";
+            } else if (color === "green") {
+                document.getElementById("myDivGreen").style.display = "block";
+                document.getElementById("myDivBlue").style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Script collapse -->
+    <script>
+        function togglePanel(color, panelNumber) {
+            var panel;
+            var allPanels;
+
+            if (color === "blue") {
+                panel = document.getElementById("panelBlue" + panelNumber);
+                allPanels = document.querySelectorAll(".accordion-panel-blue");
+            } else if (color === "green") {
+                panel = document.getElementById("panelGreen" + panelNumber);
+                allPanels = document.querySelectorAll(".accordion-panel-green");
+            }
+
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                for (var i = 0; i < allPanels.length; i++) {
+                    allPanels[i].style.display = "none";
+                }
+                panel.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
