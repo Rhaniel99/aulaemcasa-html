@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,11 +7,11 @@
     <title>Json</title>
     <style>
       /* CSS Principal */
-      .accordion-est {
+      .accordion-med {
         position: relative;
       }
 
-      #conteudo-est {
+      #conteudo-med {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -18,7 +19,7 @@
         flex-wrap: nowrap;
       }
 
-      .accordion-button-est {
+      .accordion-button-med {
         background-color: #1c4587;
         border: none;
         padding: 20px 0px 20px 20px;
@@ -33,7 +34,7 @@
         box-sizing: border-box;
       }
 
-      .accordion-panel-est {
+      .accordion-panel-med {
         margin-top: 3px;
         display: none;
         font-size: 1rem;
@@ -45,16 +46,16 @@
         box-sizing: border-box;
       }
 
-      .accordion-panel-est a {
+      .accordion-panel-med a {
         display: block;
         word-break: break-word;
       }
 
-      .accordion-panel-est.show {
+      .accordion-panel-med.show {
         display: block;
       }
 
-      .accordion-header-est {
+      .accordion-header-med {
         position: relative;
         padding: 1rem 1.25rem;
         font-size: 1rem;
@@ -63,22 +64,22 @@
         font-family: "Roboto", sans-serif;
       }
 
-      .accordion-header-green-est {
+      .accordion-header-green-med {
         background-color: #008000;
         margin-bottom: 3px;
       }
 
-      .accordion-header-blue-est {
+      .accordion-header-blue-med {
         background-color: #2556cc;
         margin-bottom: 3px;
       }
 
-      .sub-menus-est {
+      .sub-menus-med {
         background-color: #ffffff;
         display: none;
       }
 
-      .sub-menus-est a {
+      .sub-menus-med a {
         padding: 1rem 1.25rem !important;
         background-color: #f5f5f5;
         border: 1px solid #ddd;
@@ -87,51 +88,51 @@
   </head>
 
   <body>
-    <div id="conteudo-est"></div>
+    <div id="conteudo-med"></div>
     <script>
       fetch(
-        "https://raw.githubusercontent.com/Rhaniel99/rep-json-aulaemcasa/main/estiagem.json"
+        "https://raw.githubusercontent.com/Rhaniel99/rep-json-aulaemcasa/main/ensino_mediado.json"
       )
         .then((response) => response.json())
         .then((data) => {
-          const accordionDiv = document.getElementById("conteudo-est");
+          const accordionDiv = document.getElementById("conteudo-med");
           Object.keys(data).forEach((key, index) => {
             // Botões Dinamics
             const button = document.createElement("button");
-            button.className = "accordion-button-est";
+            button.className = "accordion-button-med";
             button.textContent = key;
             button.style.backgroundColor =
               index % 2 === 0 ? "#1c4587" : "#008000";
 
             button.onclick = function () {
-              toggleAccordionEst(key);
+              toggleAccordionMed(key);
             };
             accordionDiv.appendChild(button);
             const panel = document.createElement("div");
-            panel.className = "accordion-panel-est";
+            panel.className = "accordion-panel-med";
             panel.id = key;
             // Adiciona links do segundo nível ao painel
             const secondLevelData = data[key];
             Object.keys(secondLevelData).forEach((subKey) => {
               const subPanel = document.createElement("div");
-              subPanel.className = "sub-panel-est";
+              subPanel.className = "sub-panel-med";
               if (index === 0) {
-                subPanel.classList.add("accordion-header-blue-est");
+                subPanel.classList.add("accordion-header-blue-med");
               } else if (index % 2 === 1) {
-                subPanel.classList.add("accordion-header-green-est");
+                subPanel.classList.add("accordion-header-green-med");
               }
-              subPanel.innerHTML = `<div class="accordion-header-est">${subKey}</div>`;
+              subPanel.innerHTML = `<div class="accordion-header-med">${subKey}</div>`;
               const subPanelId = subKey;
               const panelId = key;
               subPanel.onclick = function () {
-                togglePanelEst(panelId, subPanelId);
+                togglePanelMed(panelId, subPanelId);
               };
               panel.appendChild(subPanel);
               // Links
               const links = secondLevelData[subKey].links;
               const linkList = document.createElement("div");
-              linkList.className = "sub-menus-est";
-              linkList.id = `link_${panelId}_${subPanelId}_est`;
+              linkList.className = "sub-menus-med";
+              linkList.id = `link_${panelId}_${subPanelId}_med`;
               links.forEach((link) => {
                 const listItem = document.createElement("li");
                 listItem.style.listStyle = "none"; // Adicione esta linha para remover os marcadores
@@ -147,8 +148,8 @@
           console.error("Erro ao obter dados:", error);
         });
 
-      function toggleAccordionEst(id) {
-        var panels = document.querySelectorAll(".accordion-panel-est");
+      function toggleAccordionMed(id) {
+        var panels = document.querySelectorAll(".accordion-panel-med");
         panels.forEach(function (panel) {
           if (panel.id === id) {
             panel.classList.toggle("show");
@@ -160,10 +161,10 @@
     </script>
 
     <script>
-      function togglePanelEst(perfil, panelNumber) {
-        var conca = `link_${perfil}_${panelNumber}_est`;
+      function togglePanelMed(perfil, panelNumber) {
+        var conca = `link_${perfil}_${panelNumber}_med`;
         var panel = document.getElementById(conca);
-        var allPanels = document.querySelectorAll(".sub-menus-est");
+        var allPanels = document.querySelectorAll(".sub-menus-med");
 
         allPanels.forEach(function (lin) {
           if (lin.id === conca) {
