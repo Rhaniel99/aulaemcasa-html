@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Json</title>
+  <style>
+    /* CSS Principal */
+    .accordion {
+      position: relative;
+    }
+
+    #conteudo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    .accordion-button {
+      background-color: #1c4587;
+      border: none;
+      padding: 20px 0px 20px 20px;
+      cursor: pointer;
+      white-space: normal;
+      overflow: hidden;
+      border: 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 1rem;
+      color: #ffffff;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .accordion-panel {
+      display: none;
+      font-size: 1rem;
+      font-family: "Roboto", sans-serif;
+      position: absolute;
+      top: 8%;
+      width: 99%;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .accordion-panel a {
+      display: block;
+      word-break: break-word;
+    }
+
+    .accordion-panel.show {
+      display: block;
+    }
+
+    .accordion-header {
+      position: relative;
+      padding: 1rem 1.25rem;
+      font-size: 1rem;
+      color: #ffffff;
+      text-align: left;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .accordion-header-green {
+      background-color: #008000;
+      margin-bottom: 3px;
+    }
+
+    .accordion-header-blue {
+      background-color: #2556cc;
+      margin-bottom: 3px;
+    }
+
+    .sub-menus {
+      background-color: #ffffff;
+      padding-left: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: none;
+    }
+
+    .sub-menus a {
+      padding: 1rem 1.25rem !important;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+    }
+
+    .link-menu {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="conteudo"></div>
+  <script>
+    fetch(
+      "./teste.json"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const accordionDiv = document.getElementById("conteudo");
+        Object.keys(data).forEach((key, index) => {
+          // Botões Dinâmicos
+          const button = document.createElement("button");
+          button.className = "accordion-button";
+          button.textContent = key;
+          button.style.backgroundColor = index % 2 === 0 ? "#1c4587" : "#008000";
+          button.onclick = function () {
+            toggleAccordion(key);
+          };
+          accordionDiv.appendChild(button);
+          const panel = document.createElement("div");
+          panel.className = "accordion-panel";
+          panel.id = key;
+          // Adiciona links do segundo nível ao painel
+          const secondLevelData = data[key];
+          Object.keys(secondLevelData).forEach((subKey) => {
+            const subPanel = document.createElement("div");
+            subPanel.className = "sub-panel";
+            if (index === 0) {
+              subPanel.classList.add("accordion-header-blue");
+            } else if (index % 2 === 1) {
+              subPanel.classList.add("accordion-header-green");
+            }
+            subPanel.innerHTML = `<div class="accordion-header">${subKey}</div>`;
+            const subPanelId = subKey;
+            const panelId = key;
+            subPanel.onclick = function () {
+              togglePanel(panelId, subPanelId);
+            };
+            panel.appendChild(subPanel);
+            // Verifica se há matérias no segundo nível e adiciona um submenu
+            if (secondLevelData[subKey].hasOwnProperty("Componentes")) {
+              const componentes = secondLevelData[subKey].Componentes;
+              const componentesSubmenu = document.createElement("div");
+              componentesSubmenu.className = "sub-menus";
+              componentesSubmenu.id = `link_${panelId}_${subPanelId}`
+              Object.keys(componentes).forEach((materia) => {
+                // Cria um elemento <h2> para a matéria
+                const materiaButton = document.createElement("h2");
+                materiaButton.textContent = materia;
+                // Adicione um evento de clique para o título <h2> da matéria
+                materiaButton.onclick = function () {
+                  toggleMateriaSubmenu(panelId, subPanelId, materia);
+                };
+                // Adicione o título <h2> ao submenu
+                componentesSubmenu.appendChild(materiaButton);
+                
+                const links = secondLevelData[subKey].Componentes[materia].links;
+                const linkList = document.createElement("div");
+                linkList.className = "link-menu";
+                linkList.id = `materia-submenu_${panelId}_${subPanelId}_${materia}`;
+                links.forEach((link) => {
+                  const listItem = document.createElement("li");
+                  listItem.style.listStyle = "none"; // Adicione esta linha para remover os marcadores
+                  listItem.innerHTML = `<a href="${link.url}" target="_blank">${link.titulo}</a>`;
+                  linkList.appendChild(listItem);
+                });
+                componentesSubmenu.appendChild(linkList);
+              });
+              subPanel.appendChild(componentesSubmenu);
+            }
+          });
+          accordionDiv.appendChild(panel);
+        });
+      })
+      .catch((error) => {
+        console.error("Erro ao obter dados:", error);
+      });
+
+    // Função para exibir/ocultar o submenu das matérias
+    function toggleMateriaSubmenu(perfil, panelNumber, materia) {
+      var conca = `materia-submenu_${perfil}_${panelNumber}_${materia}`;
+      var panel = document.getElementById(conca);
+      var allPanels = document.querySelectorAll(".sub-menus");
+
+
+      // if (materiaSubmenu.style.display === "block") {
+      //   materiaSubmenu.style.display = "none";
+      // } else {
+      //   materiaSubmenu.style.display = "block";
+      // }
+
+      allPanels.forEach(function (lin) {
+        if (lin.id === conca) {
+          panel = document.getElementById(conca);
+        } else {
+          lin.style.display = "none"; // Em vez de remover a classe, oculte os elementos
+        }
+      });
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        for (var i = 0; i < allPanels.length; i++) {
+          allPanels[i].style.display = "none";
+        }
+        panel.style.display = "block";
+      }
+
+    }
+
+    function toggleAccordion(id) {
+      var panels = document.querySelectorAll(".accordion-panel");
+      panels.forEach(function (panel) {
+        if (panel.id === id) {
+          panel.classList.toggle("show");
+        } else {
+          panel.classList.remove("show");
+        }
+      });
+    }
+  </script>
+
+  <script>
+    function togglePanel(perfil, panelNumber) {
+      var conca = `link_${perfil}_${panelNumber}`;
+      var panel = document.getElementById(conca);
+      var allPanels = document.querySelectorAll(".sub-menus");
+
+      allPanels.forEach(function (lin) {
+        if (lin.id === conca) {
+          panel = document.getElementById(conca);
+        } else {
+          lin.style.display = "none"; // Em vez de remover a classe, oculte os elementos
+        }
+      });
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        for (var i = 0; i < allPanels.length; i++) {
+          allPanels[i].style.display = "none";
+        }
+        panel.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>
