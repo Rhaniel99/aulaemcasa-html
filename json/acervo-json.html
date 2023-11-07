@@ -119,11 +119,11 @@
           Object.keys(secondLevelData).forEach((subKey) => {
             const subPanel = document.createElement("div");
             subPanel.className = "sub-panel";
-            if (index === 0) {
-              subPanel.classList.add("accordion-header-blue");
-            } else if (index % 2 === 1) {
-              subPanel.classList.add("accordion-header-green");
-            }
+            if (index % 2 === 0) {
+                subPanel.classList.add("accordion-header-blue");
+              } else {
+                subPanel.classList.add("accordion-header-green");
+              }
             subPanel.innerHTML = `<div class="accordion-header">${subKey}</div>`;
             const subPanelId = subKey;
             const panelId = key;
