@@ -137,7 +137,99 @@
         }
       }
     },
-    "Vídeos YouTube": {
+    "Cartelas": {
+        "EF 6º Ano": {
+          "Componentes": {
+            "Matemática": {
+              "links": [
+                {"titulo": "Aula 1 YT: Retas paralelas, concorrentes e perpendiculares", "url": "https://www.youtube.com/watch?v=pLWpxEEymJI"},
+                {"titulo": "Aula 2 YT: Introdução aos conceitos de medidas de comprimento, área, volume, massa, tempo, capacidade e temperatura.", "url": "https://www.youtube.com/watch?v=StDvrQaJdww"}
+              ]
+            },
+            "Português": {
+              "links": [
+                {"titulo": "Aula 1 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 2 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            },
+            "Filosofia": {
+              "links": [
+                {"titulo": "Aula 5 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 9 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            }
+          }
+        },
+        "EF 7º Ano": {
+          "Componentes": {
+            "Matemática": {
+              "links": [
+                {"titulo": "Aula 1 YT: Retas paralelas, concorrentes e perpendiculares", "url": "https://www.youtube.com/watch?v=pLWpxEEymJI"},
+                {"titulo": "Aula 2 YT: Introdução aos conceitos de medidas de comprimento, área, volume, massa, tempo, capacidade e temperatura.", "url": "https://www.youtube.com/watch?v=StDvrQaJdww"}
+              ]
+            },
+            "Português": {
+              "links": [
+                {"titulo": "Aula 1 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 2 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            },
+            "Filosofia": {
+              "links": [
+                {"titulo": "Aula 5 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 9 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            }
+          }
+        }
+      },
+      "Download Videos(MP4)": {
+        "EF 6º Ano": {
+          "Componentes": {
+            "Matemática": {
+              "links": [
+                {"titulo": "Aula 1 YT: Retas paralelas, concorrentes e perpendiculares", "url": "https://www.youtube.com/watch?v=pLWpxEEymJI"},
+                {"titulo": "Aula 2 YT: Introdução aos conceitos de medidas de comprimento, área, volume, massa, tempo, capacidade e temperatura.", "url": "https://www.youtube.com/watch?v=StDvrQaJdww"}
+              ]
+            },
+            "Português": {
+              "links": [
+                {"titulo": "Aula 1 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 2 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            },
+            "Filosofia": {
+              "links": [
+                {"titulo": "Aula 5 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 9 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            }
+          }
+        },
+        "EF 7º Ano": {
+          "Componentes": {
+            "Matemática": {
+              "links": [
+                {"titulo": "Aula 1 YT: Retas paralelas, concorrentes e perpendiculares", "url": "https://www.youtube.com/watch?v=pLWpxEEymJI"},
+                {"titulo": "Aula 2 YT: Introdução aos conceitos de medidas de comprimento, área, volume, massa, tempo, capacidade e temperatura.", "url": "https://www.youtube.com/watch?v=StDvrQaJdww"}
+              ]
+            },
+            "Português": {
+              "links": [
+                {"titulo": "Aula 1 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 2 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            },
+            "Filosofia": {
+              "links": [
+                {"titulo": "Aula 5 YT: Tipo textual: Narração", "url": "https://www.youtube.com/watch?v=E3bgrBa7Y6Q"},
+                {"titulo": "Aula 9 YT: Intertextualidade: o diálogo entre os diversos tipos e gêneros textuais", "url": "https://www.youtube.com/watch?v=Pnd1tO8ESKo"}
+              ]
+            }
+          }
+        }
+      },
+      "Vídeos YouTube": {
         "EF 6º Ano": {
           "Componentes": {
             "Matemática": {
