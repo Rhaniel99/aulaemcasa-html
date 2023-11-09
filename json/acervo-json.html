@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +27,7 @@
       overflow: hidden;
       border: 0;
       font-family: "Roboto", sans-serif;
-      font-size: 1rem;
+      font-size: 1.35rem;
       color: #ffffff;
       width: 50%;
       box-sizing: border-box;
@@ -57,7 +56,7 @@
 
     .accordion-header-ac {
       position: relative;
-      padding: 1rem 1.25rem;
+      padding: 2rem 2.25rem;
       font-size: 1rem;
       color: #ffffff;
       text-align: left;
@@ -81,7 +80,7 @@
     .tittle-sub-menus-ac {
       background-color: #5b95f9;
       border: none;
-      padding: 20px 0px 20px 20px;
+      padding: 1.75rem 2.25rem;
       cursor: pointer;
       white-space: normal;
       overflow: hidden;
@@ -110,7 +109,6 @@
     }
   </style>
 </head>
-
 <body>
   <div id="conteudo-ac"></div>
   <script>
@@ -156,11 +154,13 @@
               const componentesSubmenu = document.createElement("div");
               componentesSubmenu.className = "sub-menus-ac";
               componentesSubmenu.id = `link_${panelId}_${subPanelId}`
-              Object.keys(componentes).forEach((materia) => {
+              Object.keys(componentes).forEach((materia, cont) => {
+                console.log(cont)
                 // Cria um elemento <h2> para a matéria
                 const materiaButton = document.createElement("h5");
                 materiaButton.textContent = materia;
                 materiaButton.className = "tittle-sub-menus-ac"
+                materiaButton.style.backgroundColor = index % 2 === 0 ? "#3f78da" : "#60b43c";
                 // Adicione um evento de clique para o título <h2> da matéria
                 materiaButton.onclick = function () {
                   toggleMateriaSubmenuAC(panelId, subPanelId, materia);
@@ -251,5 +251,4 @@
     }
   </script>
 </body>
-
 </html>
