@@ -29,7 +29,7 @@
       font-family: "Roboto", sans-serif;
       font-size: 1.35rem;
       color: #ffffff;
-      width: 50%;
+      width: 100%;
       box-sizing: border-box;
     }
 
@@ -112,143 +112,99 @@
 <body>
   <div id="conteudo-ac"></div>
   <script>
-    fetch(
-      "https://raw.githubusercontent.com/Rhaniel99/aulaemcasa-html/main/json/teste.json"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const accordionDiv = document.getElementById("conteudo-ac");
-        Object.keys(data).forEach((key, index) => {
-          // Botões Dinâmicos
-          const button = document.createElement("button");
-          button.className = "accordion-button-ac";
-          button.textContent = key;
-          button.style.backgroundColor = index % 2 === 0 ? "#1c4587" : "#008000";
-          button.onclick = function () {
-            toggleAccordionAC(key);
-          };
-          accordionDiv.appendChild(button);
-          const panel = document.createElement("div");
-          panel.className = "accordion-panel-ac";
-          panel.id = key;
-          // Adiciona links do segundo nível ao painel
-          const secondLevelData = data[key];
-          Object.keys(secondLevelData).forEach((subKey) => {
-            const subPanel = document.createElement("div");
-            subPanel.className = "sub-panel-ac";
-            if (index % 2 === 0) {
-              subPanel.classList.add("accordion-header-blue-ac");
-            } else {
-              subPanel.classList.add("accordion-header-green-ac");
-            }
-            subPanel.innerHTML = `<div class="accordion-header-ac">${subKey}</div>`;
-            const subPanelId = subKey;
-            const panelId = key;
-            subPanel.onclick = function () {
-              togglePanelAC(panelId, subPanelId);
-            };
-            panel.appendChild(subPanel);
-            // Verifica se há matérias no segundo nível e adiciona um submenu
-            if (secondLevelData[subKey].hasOwnProperty("Componentes")) {
-              const componentes = secondLevelData[subKey].Componentes;
-              const componentesSubmenu = document.createElement("div");
-              componentesSubmenu.className = "sub-menus-ac";
-              componentesSubmenu.id = `link_${panelId}_${subPanelId}`
-              Object.keys(componentes).forEach((materia, cont) => {
-                console.log(cont)
-                // Cria um elemento <h2> para a matéria
-                const materiaButton = document.createElement("h5");
-                materiaButton.textContent = materia;
-                materiaButton.className = "tittle-sub-menus-ac"
-                materiaButton.style.backgroundColor = index % 2 === 0 ? "#3f78da" : "#60b43c";
-                // Adicione um evento de clique para o título <h2> da matéria
-                materiaButton.onclick = function () {
-                  toggleMateriaSubmenuAC(panelId, subPanelId, materia);
-                };
-                componentesSubmenu.appendChild(materiaButton);
-                const links = secondLevelData[subKey].Componentes[materia].links;
-                const linkList = document.createElement("div");
-                linkList.className = "link-menu-ac";
-                linkList.id = `materia-submenu_${panelId}_${subPanelId}_${materia}_ac`;
-                links.forEach((link) => {
-                  const listItem = document.createElement("li");
-                  listItem.style.listStyle = "none"; 
-                  listItem.innerHTML = `<a href="${link.url}" target="_blank">${link.titulo}</a>`;
-                  linkList.appendChild(listItem);
-                });
-                componentesSubmenu.appendChild(linkList);
-              });
-              panel.appendChild(componentesSubmenu);
-            }
+fetch("https://raw.githubusercontent.com/Rhaniel99/aulaemcasa-html/main/json/vd_2020.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const accordionDiv = document.getElementById("conteudo-ac");
+    Object.keys(data).forEach((key, index) => {
+      // Botões Dinâmicos
+      const button = document.createElement("button");
+      button.className = "accordion-button-ac";
+      button.textContent = key;
+      button.style.backgroundColor = index % 2 === 0 ? "#1c4587" : "#008000";
+      button.onclick = function () {
+        toggleAccordionAC(key);
+      };
+      accordionDiv.appendChild(button);
+      
+      const panel = document.createElement("div");
+      panel.className = "accordion-panel-ac";
+      panel.id = key;
+      
+      // Adiciona links do segundo nível ao painel
+      const secondLevelData = data[key];
+      Object.keys(secondLevelData).forEach((subKey) => {
+        const subPanel = document.createElement("div");
+        subPanel.className = "sub-panel-ac";
+        if (index % 2 === 0) {
+          subPanel.classList.add("accordion-header-blue-ac");
+        } else {
+          subPanel.classList.add("accordion-header-green-ac");
+        }
+        subPanel.innerHTML = `<div class="accordion-header-ac">${subKey}</div>`;
+        const subPanelId = subKey;
+        const panelId = key;
+        subPanel.onclick = function () {
+          togglePanelAC(panelId, subPanelId);
+        };
+        panel.appendChild(subPanel);
+        
+        // Verifica se há matérias no segundo nível e adiciona um submenu
+        if (secondLevelData[subKey].hasOwnProperty("links")) {
+          const links = secondLevelData[subKey].links;
+          const linksSubmenu = document.createElement("div");
+          linksSubmenu.className = "sub-menus-ac";
+          linksSubmenu.id = `link_${panelId}_${subPanelId}`
+          links.forEach((link) => {
+            const listItem = document.createElement("li");
+            listItem.style.listStyle = "none"; 
+            listItem.innerHTML = `<a href="${link.url}" target="_blank"> clique aqui para baixar -> ${link.titulo}</a>`;
+            linksSubmenu.appendChild(listItem);
           });
-          accordionDiv.appendChild(panel);
-        });
-      })
-      .catch((error) => {
-        console.error("Erro ao obter dados:", error);
-      });
-
-    // Função para exibir/ocultar o submenu das matérias
-    function toggleMateriaSubmenuAC(perfil, panelNumber, materia) {
-      var conca = `materia-submenu_${perfil}_${panelNumber}_${materia}_ac`;
-      var panel = document.getElementById(conca);
-      var allPanels = document.querySelectorAll(".link-menu-ac");
-
-      allPanels.forEach(function (lin) {
-        console.log(lin)
-        if (lin.id === conca) {
-          panel = document.getElementById(conca);
-        } else {
-          lin.style.display = "none";
+          panel.appendChild(linksSubmenu);
         }
       });
+      accordionDiv.appendChild(panel);
+    });
+  })
+  .catch((error) => {
+    console.error("Erro ao obter dados:", error);
+  });
 
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        for (var i = 0; i < allPanels.length; i++) {
-          allPanels[i].style.display = "none";
-        }
-        panel.style.display = "block";
-      }
-
+// Função para exibir/ocultar o submenu das matérias
+function toggleAccordionAC(id) {
+  var panels = document.querySelectorAll(".accordion-panel-ac");
+  panels.forEach(function (panel) {
+    if (panel.id === id) {
+      panel.classList.toggle("show");
+    } else {
+      panel.classList.remove("show");
     }
+  });
+}
 
-    function toggleAccordionAC(id) {
-      var panels = document.querySelectorAll(".accordion-panel-ac");
-      panels.forEach(function (panel) {
-        if (panel.id === id) {
-          panel.classList.toggle("show");
-        } else {
-          panel.classList.remove("show");
-        }
-      });
+function togglePanelAC(perfil, panelNumber) {
+  var conca = `link_${perfil}_${panelNumber}`;
+  var panel = document.getElementById(conca);
+  var allPanels = document.querySelectorAll(".link-menu-ac");
+
+  allPanels.forEach(function (lin) {
+    if (lin.id === conca) {
+      panel = document.getElementById(conca);
+    } else {
+      lin.style.display = "none"; 
     }
-  </script>
+  });
 
-  <script>
-    function togglePanelAC(perfil, panelNumber) {
-      var conca = `link_${perfil}_${panelNumber}`;
-      var panel = document.getElementById(conca);
-      var allPanels = document.querySelectorAll(".link-menu-ac");
-
-      allPanels.forEach(function (lin) {
-        if (lin.id === conca) {
-          panel = document.getElementById(conca);
-        } else {
-          lin.style.display = "none"; 
-        }
-      });
-
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        for (var i = 0; i < allPanels.length; i++) {
-          allPanels[i].style.display = "none";
-        }
-        panel.style.display = "block";
-      }
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+  } else {
+    for (var i = 0; i < allPanels.length; i++) {
+      allPanels[i].style.display = "none";
     }
+    panel.style.display = "block";
+  }
+}
   </script>
 </body>
 </html>
