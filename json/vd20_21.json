@@ -1,632 +1,462 @@
 {
     "Aula em Casa - Acervo 2021": {
-      "Ensinos": {
-        "Titulos": {
-          "links": [
-            {
-              "titulo": "Links"
-            }
-          ]
-        }
-      },
       "EF 1º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1XHwvVMyErlg9b3DN39ga_4rf-Sm0yrOy?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1fMOdGrRFHc_b77rXHfQEfQnIPMU7hmOx?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1XHwvVMyErlg9b3DN39ga_4rf-Sm0yrOy?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1fMOdGrRFHc_b77rXHfQEfQnIPMU7hmOx?usp=drive_link"
+          }
+        ]
       },
       "EF 2º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1nW0_PXTHBmGNgjhEhP1NxJStiyPeuVOW?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1g5D5OkS6MH30mstYN1SiceH_wNgjWtgo?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1nW0_PXTHBmGNgjhEhP1NxJStiyPeuVOW?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1g5D5OkS6MH30mstYN1SiceH_wNgjWtgo?usp=drive_link"
+          }
+        ]
       },
       "EF 3º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1TEewgQ3T8R6peshkgOPj9fZquPvNLCSp?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1neuJH45BCSagCFrx-8aznyFNuJlcbOQe?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1TEewgQ3T8R6peshkgOPj9fZquPvNLCSp?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1neuJH45BCSagCFrx-8aznyFNuJlcbOQe?usp=drive_link"
+          }
+        ]
       },
       "EF 4º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1oZQ02bzMkzhcDLwqwykJUISrDc8szrNc?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/19mDrF333DOS7kf4vqV_EKEemWeU6yzZI?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1oZQ02bzMkzhcDLwqwykJUISrDc8szrNc?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/19mDrF333DOS7kf4vqV_EKEemWeU6yzZI?usp=drive_link"
+          }
+        ]
       },
       "EF 5º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1m5b146gT2T8Y3_W2smjcv--s3kixKFt4?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1Hr6PCwJH11VEPpkf-EGBfTAl5SpvAp36?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1m5b146gT2T8Y3_W2smjcv--s3kixKFt4?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1Hr6PCwJH11VEPpkf-EGBfTAl5SpvAp36?usp=drive_link"
+          }
+        ]
       },
       "EF 6º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1Qug9t-fvlcHDBNBgTaKX3cXunyVfHxqE?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1CC2UCp29ELyHiw5Q53s5uvSbBhuCCKcj?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1Qug9t-fvlcHDBNBgTaKX3cXunyVfHxqE?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1CC2UCp29ELyHiw5Q53s5uvSbBhuCCKcj?usp=drive_link"
+          }
+        ]
       },
       "EF 7º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1lOxx3YSrxlbiYfsBlfyaGuMi5ZBVmfsw?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1MLThCUl_ns5CtPVcg3j6qQ6ZyZZ4C-q-?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1lOxx3YSrxlbiYfsBlfyaGuMi5ZBVmfsw?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1MLThCUl_ns5CtPVcg3j6qQ6ZyZZ4C-q-?usp=drive_link"
+          }
+        ]
       },
       "EF 8º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/10yPvEXSAdziHw380nWbNdHdcV3FChZ9_?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1kxqgdg8jAx3Sq4GhGLEVbAP7EiKBdq8v?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/10yPvEXSAdziHw380nWbNdHdcV3FChZ9_?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1kxqgdg8jAx3Sq4GhGLEVbAP7EiKBdq8v?usp=drive_link"
+          }
+        ]
       },
       "EF 9º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1B2rs5_Vx1jg0l57mRPN4PS88I2WlJNzu?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1-YMWu4xEdg0jCBosv_Cyy5FYIGTKEk2C?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1B2rs5_Vx1jg0l57mRPN4PS88I2WlJNzu?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1-YMWu4xEdg0jCBosv_Cyy5FYIGTKEk2C?usp=drive_link"
+          }
+        ]
       },
       "EJA 5º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/13Dvhgjhq97NXa7EmNZkn3skeYFaEuNkd?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1cQisB76TsuZ02SW62uzbKQ4npOk63PoV?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/13Dvhgjhq97NXa7EmNZkn3skeYFaEuNkd?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1cQisB76TsuZ02SW62uzbKQ4npOk63PoV?usp=drive_link"
+          }
+        ]
       },
       "EJA 6º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/10Lv8RnQCP939tiFKqrWsryzApQZ7hSHh?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1XlpmV2KgI9tQE03az9ZDvRelgCR-AEG1?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/10Lv8RnQCP939tiFKqrWsryzApQZ7hSHh?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1XlpmV2KgI9tQE03az9ZDvRelgCR-AEG1?usp=drive_link"
+          }
+        ]
       },
       "EJA 7º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1tiBKUz3c2g8DbXdsW8ihrtaQebCBi220?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1GnDZ894yKMLVF2sQs2He8Hg1aM8DYLdg?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1tiBKUz3c2g8DbXdsW8ihrtaQebCBi220?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1GnDZ894yKMLVF2sQs2He8Hg1aM8DYLdg?usp=drive_link"
+          }
+        ]
       },
       "EJA 8º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1xnBrXGFMTYCEQs1uM8IsJRezmFjUsReL?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1uJAm0Ve6NyTWsySGG_qdngaF3hAKNbYE?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1xnBrXGFMTYCEQs1uM8IsJRezmFjUsReL?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1uJAm0Ve6NyTWsySGG_qdngaF3hAKNbYE?usp=drive_link"
+          }
+        ]
       },
       "EJA 9º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1GSGhsQJEELFW9jFMSFowY6NiHaz6ve_K?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1SOg4A98h9r16faPWuyKAHYDVUsfKO7mP?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1GSGhsQJEELFW9jFMSFowY6NiHaz6ve_K?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1SOg4A98h9r16faPWuyKAHYDVUsfKO7mP?usp=drive_link"
+          }
+        ]
       },
       "EJA 10º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1IoWSj-UV3ujZQ3_Mqr01YXrM8eDyNvW_?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1TTgPMMt0r8fm6pe7MDhh6NFd9fEIg2z4?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1IoWSj-UV3ujZQ3_Mqr01YXrM8eDyNvW_?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1TTgPMMt0r8fm6pe7MDhh6NFd9fEIg2z4?usp=drive_link"
+          }
+        ]
       },
       "EJA 11º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/13-pgHz7ZblN_mDShXelyA35gx_SUke9b?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1NlwW50GXA1xnUjRJ_3dEcjjp8Z9IZsk_?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/13-pgHz7ZblN_mDShXelyA35gx_SUke9b?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1NlwW50GXA1xnUjRJ_3dEcjjp8Z9IZsk_?usp=drive_link"
+          }
+        ]
       },
       "EM 1º Série": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/12W6drYAPi70BIxp5pmpDNM05v9Y6OmJ5?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1bMEYdFAvkfcQEJcCWgm9q3mBhHIi0yRo?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/12W6drYAPi70BIxp5pmpDNM05v9Y6OmJ5?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1bMEYdFAvkfcQEJcCWgm9q3mBhHIi0yRo?usp=drive_link"
+          }
+        ]
       },
       "EJA 2º Série": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1XzN1zGq3-9cmlXvKnw-jwJf-9fuJTnIl?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1bGe1WbN87stu_Jl4hc2q4bmddIbJbTfN?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1XzN1zGq3-9cmlXvKnw-jwJf-9fuJTnIl?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1bGe1WbN87stu_Jl4hc2q4bmddIbJbTfN?usp=drive_link"
+          }
+        ]
       },
       "EJA 3º Série": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1gqnzoS9ydUEiEqX2XwTNlKpKV0bMAZSY?usp=drive_link"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/folders/1-wMdtAFJGKO8ttNFboil6jo0ci9rIxyO?usp=drive_link"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/folders/1gqnzoS9ydUEiEqX2XwTNlKpKV0bMAZSY?usp=drive_link"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/folders/1-wMdtAFJGKO8ttNFboil6jo0ci9rIxyO?usp=drive_link"
+          }
+        ]
       }
     },
     "Aula em Casa - Acervo 2020": {
-      "Ensinos": {
-        "Titulos": {
-          "links": [
-            {
-              "titulo": "Links"
-            }
-          ]
-        }
-      },
       "EF 1º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 2º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 3º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 4º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 5º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 6º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 7º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 8º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EF 9º Ano": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 5º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 6º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 7º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 8º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 9º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 10º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 11º Etapa ": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EM 1º Série": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 2º Série": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       },
       "EJA 3º Série": {
-        "Cartelas": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        },
-        "Video aula": {
-          "links": [
-            {
-              "titulo": "https://drive.google.com/drive/home"
-            }
-          ]
-        }
+        "links": [
+          {
+            "titulo": "Cartelas",
+            "url": "https://drive.google.com/drive/home"
+          },
+          {
+            "titulo": "Video aula",
+            "url": "https://drive.google.com/drive/home"
+          }
+        ]
       }
     }
   }
