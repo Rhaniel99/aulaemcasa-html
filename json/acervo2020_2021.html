@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vd 2020</title>
+  <style>
+    /* CSS Principal */
+    .accordion-ac {
+      position: relative;
+    }
+
+    #conteudo-ac {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    .accordion-button-ac {
+      background-color: #1c4587;
+      border: none;
+      padding: 20px 0px 20px 20px;
+      cursor: pointer;
+      white-space: normal;
+      overflow: hidden;
+      border: 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.35rem;
+      color: #ffffff;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .accordion-panel-ac {
+      margin-top: 3px;
+      display: none;
+      font-size: 1rem;
+      font-family: "Roboto", sans-serif;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .accordion-panel-ac a {
+      display: block;
+      word-break: break-word;
+    }
+
+    .accordion-panel-ac.show {
+      display: block;
+    }
+
+    .accordion-header-ac {
+      position: relative;
+      padding: 2rem 2.25rem;
+      margin-bottom: 3px;
+      font-size: 1rem;
+      color: #ffffff;
+      text-align: left;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .accordion-header-green-ac {
+      background-color: #008000;
+    }
+
+    .accordion-header-blue-ac {
+      background-color: #2556cc;
+    }
+
+    .sub-menus-ac {
+      background-color: #ffffff;
+      padding-left: 20px;
+      display: none;
+    }
+
+    .tittle-sub-menus-ac {
+      border: none;
+      padding: 1.75rem 2.25rem;
+      cursor: pointer;
+      white-space: normal;
+      overflow: hidden;
+      border: 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 1rem;
+      color: #ffffff;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .link-menu-ac {
+      display: none;
+      background-color: #ffffff;
+      padding-left: 20px;
+    }
+
+    .link-menu-ac a {
+      padding: 1rem 1.25rem !important;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+    }
+
+    h5 {
+      margin: 3px 0px 3px 0px !important;
+    }
+  </style>
+</head>
+<body>
+
+    <div>
+        <div id="conteudo-ac"></div>
+        <input type="text" id="campo-busca" placeholder="Pesquisar série...">
+    </div>
+
+<script>
+fetch("https://raw.githubusercontent.com/Rhaniel99/aulaemcasa-html/main/json/vd20_21.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const accordionDiv = document.getElementById("conteudo-ac");
+    //campo filtro
+    const campoBusca = document.getElementById("campo-busca");
+    const accordionState = {}; // Para armazenar o estado de abertura dos botões
+
+    //filtro
+    function renderizarSeries(filtro = "") {
+      accordionDiv.innerHTML = "";
+      //botão principal
+      Object.keys(data).forEach((key, index) => {
+        // Botões Dinâmicos
+        const button = document.createElement("button");
+        button.className = "accordion-button-ac";
+        button.textContent = key;
+        button.style.backgroundColor = index % 2 === 0 ? "#1c4587" : "#008000";
+        button.onclick = function () {
+          toggleAccordionAC(key, filtro);
+        };
+        accordionDiv.appendChild(button);
+        
+        const panel = document.createElement("div");
+        panel.className = "accordion-panel-ac";
+        panel.id = key;
+        
+        // Adiciona links do segundo nível ao painel
+        const secondLevelData = data[key];
+        Object.keys(secondLevelData).forEach((subKey) => {
+            //fitra os buttons
+          if (subKey.toLowerCase().includes(filtro.toLowerCase())) { // Verifica se o subKey contém o filtro
+            //subbuttons
+            const subPanel = document.createElement("div");
+            subPanel.className = "sub-panel-ac";
+            if (index % 2 === 0) {
+              subPanel.classList.add("accordion-header-blue-ac");
+            } else {
+              subPanel.classList.add("accordion-header-green-ac");
+            }
+            subPanel.innerHTML = `<div class="accordion-header-ac">${subKey}</div>`;
+            const subPanelId = subKey;
+            const panelId = key;
+            subPanel.onclick = function () {
+              togglePanelAC(panelId, subPanelId);
+            };
+            panel.appendChild(subPanel);
+            
+            // Verifica se há matérias no segundo nível e adiciona um submenu
+            if (secondLevelData[subKey].hasOwnProperty("links")) {
+              const links = secondLevelData[subKey].links;
+              const linksSubmenu = document.createElement("div");
+              linksSubmenu.className = "tittle-sub-menus-ac link-menu-ac";
+              linksSubmenu.className = "link-menu-ac";
+              linksSubmenu.id = `link_${panelId}_${subPanelId}`
+              links.forEach((link) => {
+                const listItem = document.createElement("li");
+                listItem.style.listStyle = "none"; 
+                listItem.innerHTML = `<a href="${link.url}" target="_blank"> clique aqui para baixar -> ${link.titulo}</a>`;
+                linksSubmenu.appendChild(listItem);
+              });
+              panel.appendChild(linksSubmenu);
+            }
+          }
+        });
+        accordionDiv.appendChild(panel);
+
+        // Restaurar o estado de abertura do botão (trabalha com o filtro)
+        if (accordionState[key]) {
+          panel.classList.add("show");
+        }
+      });
+    }
+        renderizarSeries();
+        campoBusca.addEventListener("input", () => {
+        renderizarSeries(campoBusca.value);
+    });
+
+    // Função para exibir/ocultar o submenu das matérias (trabalha com o filtro)
+    function toggleAccordionAC(id, filtro) {
+      var panel = document.getElementById(id);
+      panel.classList.toggle("show");
+      accordionState[id] = panel.classList.contains("show"); // Atualizar o estado do botão
+      renderizarSeries(filtro); // Aplicar filtro ao abrir/fechar a série
+    }
+
+    function togglePanelAC(perfil, panelNumber) {
+      var conca = `link_${perfil}_${panelNumber}`;
+      var panel = document.getElementById(conca);
+      var allPanels = document.querySelectorAll(".link-menu-ac");
+
+      allPanels.forEach(function (lin) {
+        if (lin.id === conca) {
+          panel = document.getElementById(conca);
+        } else {
+          lin.style.display = "none"; 
+        }
+      });
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        for (var i = 0; i < allPanels.length; i++) {
+          allPanels[i].style.display = "none";
+        }
+        panel.style.display = "block";
+      }
+    }
+
+  })
+  .catch((error) => {
+    console.error("Erro ao obter dados:", error);
+  });
+
+  </script>
+</body>
+</html>
