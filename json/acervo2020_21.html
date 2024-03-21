@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Json</title>
+  <title>vd 2020</title>
   <style>
     /* CSS Principal */
     .accordion-ac {
@@ -153,7 +153,8 @@ fetch("https://raw.githubusercontent.com/Rhaniel99/aulaemcasa-html/main/json/vd_
         if (secondLevelData[subKey].hasOwnProperty("links")) {
           const links = secondLevelData[subKey].links;
           const linksSubmenu = document.createElement("div");
-          linksSubmenu.className = "sub-menus-ac";
+          linksSubmenu.className = "tittle-sub-menus-ac";
+          linksSubmenu.className = "link-menu-ac";
           linksSubmenu.id = `link_${panelId}_${subPanelId}`
           links.forEach((link) => {
             const listItem = document.createElement("li");
