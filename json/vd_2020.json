@@ -204,7 +204,7 @@
           }
         ]
       },
-      "EJA 2º Série": {
+      "EM 2º Série": { 
         "links": [
           {
             "titulo": "Cartelas",
@@ -216,8 +216,8 @@
           }
         ]
       },
-      "EJA 3º Série": {
-        "links": [
+      "EM 3º Série": {
+        "links": [ 
           {
             "titulo": "Cartelas",
             "url": "https://drive.google.com/drive/folders/1gqnzoS9ydUEiEqX2XwTNlKpKV0bMAZSY?usp=drive_link"
